@@ -1,0 +1,20 @@
+@use "header" as header;
+@use "first-view-container" as first;
+@use "reason-container" as reason;
+@use "opinion-container" as opinion;
+@use "overview-container" as overview;
+@use "conversion_container" as conversion;
+@use "footer-container" as footer;
+
+html {
+  font-size: 100%;
+
+  .body {
+    font-family: "Arial", "游ゴシック", sans-serif;
+    letter-spacing: 0.1em;
+    width: 100%;
+  }
+}
+
+
+

@@ -1,0 +1,147 @@
+.opinion-container {
+  max-width: 860px;
+  margin: 0 auto 120px auto;
+
+  // 共通化できる
+  .opinion-container__opinion {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  // 共通化できる 
+  .reason__line {
+    border-bottom: solid 3px #000000;
+    border-radius: 3px;
+    width: 80px;
+    margin: 0 auto 100px auto; 
+    margin-bottom: 100px;
+  }
+
+  .opinion-container_lr {
+    margin-bottom: 60px;
+    opacity: 0;
+
+    .text-contents {
+      background-color: #e9f1fb;
+      border-radius: 10px;
+      margin-left: 25px;
+      padding: 20px 20px;
+    }
+    .text-contents::before {
+      position: relative;
+      top: 120px;
+      left: -5px;
+      background-color: #e9f1fb;
+      border-top: 1px solid #e9f1fb;
+      border-left: 1px solid #e9f1fb;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      content: "";
+      transform: rotate(-45deg);
+    }
+    .img-contents {
+      .human-img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .ballon {
+    animation: ballon 0.5s forwards;
+  }
+  @keyframes ballon {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .opinion-container__left {
+    display: flex;
+    .img-contents {
+      .human-img {
+        width: 120px;
+      }
+      .human-name {
+        text-align: center;
+      }
+    }
+  }
+  .opinion-container__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: end;
+
+    .img-contents {
+      .human-img {
+        width: 120px;
+      }
+      .human-name {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .opinion-container {
+          max-width: 860px;
+          margin: 0 auto 80px auto;
+  
+          // 共通化できる
+          .opinion-container__opinion {
+            font-size: 1.75rem;
+          }
+          // 共通化できる 
+          .reason__line {
+            margin-bottom: 80px;
+          }
+  
+          // left and right
+          .opinion-container_lr {
+            width: calc(100% - 32px);
+            margin: 0 auto 80px auto;   
+  
+            .text-contents {
+              margin-left: 0px;
+              margin-bottom: 30px;
+            }
+            .text-contents::before {
+              position: relative;
+              top: 100%;
+              // bottom: -50%;
+              left: 50%;
+              width: 10px;
+              height: 10px;
+              display: inline-block;
+              content: "";
+              transform: rotate(-45deg);
+            }
+            .img-contents {
+              margin: 0 auto;
+
+              .human-img {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          .opinion-container__left {
+            flex-direction: column-reverse;
+            .img-contents {
+              .human-img {
+                width: 120px;
+              }
+              .human-name {
+                text-align: center;
+              }
+            }
+          }
+          .opinion-container__right {
+            flex-direction: column;
+          }
+        }
+}

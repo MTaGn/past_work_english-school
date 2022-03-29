@@ -1,0 +1,193 @@
+html {
+  .body {
+    .header-container {
+       display: flex;
+       justify-content: space-between;
+       height: 100px;
+       width: 100%;
+      .header-containe__h1-icon {
+        padding: 40px 0 0 50px;
+      }
+
+      .header-container__humberger {
+        cursor: pointer;
+        background-color: #ff0000;
+        width: 100px;
+        height: 100px;
+        padding: 20px 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        .header-container__line1,
+        .header-container__line2,
+        .header-container__line3 {
+          display: inline-block;
+          border-bottom:solid 2px #ffffff;
+          height: 2px;
+          width: 60px;
+        }
+      }      
+
+      .header-container__nav-container {
+        display: none;
+        position: relative;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+        cursor: pointer;
+        
+        .nav-flex-container {
+          display: flex;
+          justify-content: space-between;
+
+
+          .nav-flex-container__icon-anker {
+            padding: 40px 0 0 50px;
+          }
+
+          .close {
+            height: 100px;
+            width: 100px;
+            padding: 50px 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            
+            .close__line1 {
+              animation: rorate-forward .5s;
+              animation-fill-mode: forwards;
+            }
+            .close__line2 {
+              animation: rorate-reverse .5s;
+              animation-fill-mode: forwards;
+            }
+            .close__line {
+              display: block;
+              border-bottom:solid 2px #ffffff;
+              height: 2px;
+              width: 60px;
+            }
+
+            @keyframes rorate-forward {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(45deg);
+              }
+            }
+            @keyframes rorate-reverse {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+
+        .subheading {
+          position: absolute;
+          top: 25%;
+          left: 45%;
+          text-align: center;
+
+          .subheading__li {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 40px;
+
+          }
+          .subheading__li.button {
+            border: solid 1px #ffffff;
+            padding: 20px 40px;
+            position: relative;
+          }
+          .subheading__li.button:hover {
+            color: #ff0000;
+            background-color: #ffffff;
+          }
+          // 枠用
+          .subheading__li.button::after {
+            content: "";
+            border-right: solid 1px #ffffff;
+            border-bottom: solid 1px #ffffff;
+            position: absolute; // 親要素が.subheading__li.buttonになるので
+            top: 0;
+            left: 0;
+            right: -5px;
+            bottom: -5px;
+          }
+        }
+      }
+
+      .header-container__nav-container.show {
+        display: block;
+      }
+
+      .mask {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ff0000;
+        z-index: 10;
+      }
+
+      .mask.show {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    .body {
+      .header-container {
+        .h1__icon {
+          padding: 25px 0 0 25px;
+        }
+
+        .humberger {
+          height: 80px;
+          width: 80px;
+
+          .line1,
+          .line2,
+          .line3 {
+            width: 40px;
+            margin-bottom: 10px;
+          }
+        }
+        
+        .header-container__nav-container {
+          .nav-flex-container {
+            .close {
+              width: 80px;
+              height: 80px;
+
+              .close__line1,
+              .close__line2 {
+                width: 40px;
+              }
+            }
+          }
+          .subheading {
+            left: 0;
+            width: 100%;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }  
+}
+
+
+

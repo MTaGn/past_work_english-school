@@ -1,0 +1,100 @@
+.overview-container {
+  background: url("../img/bg.gif") repeat;
+  animation: fall 10s infinite linear;
+  margin-bottom: 120px;
+  padding: 60px;
+
+  @keyframes fall {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -700px 700px;
+    }
+  }
+
+  .overview-container__overview {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  // 共通化できる
+  .subheading__line {
+    border-bottom: solid 3px #000000;
+    border-radius: 3px;
+    width: 80px;
+    margin: 0 auto 100px auto; 
+    margin-bottom: 100px;
+  }
+  .overview-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 860px;
+    margin: 0 auto;
+
+    .overview-box {
+      width: 48%;
+      height: 300px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      padding: 60px;
+
+      .subheading {
+        .ja {
+          font-size: 1.75rem;
+          font-weight: 500;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        .en {
+          font-size: 1.125rem;
+          font-weight: 500;
+          text-align: center; 
+          margin-bottom: 25px;
+        }
+      }
+      .content {
+        .price {
+          display: inline-block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .overview-container {
+          margin-bottom: 80px;
+          padding: 60px 16px 60px;
+  
+          .overview-container__overview {
+            font-size: 1.75rem;
+          }
+          // 共通化できる
+          .subheading__line {
+            margin-bottom: 80px;
+          }
+          .overview-list {
+            display: block;
+  
+            .overview-box {
+              width: 100%;
+              height: 300px;
+              margin-bottom: 30px;
+              padding: 30px;
+  
+              .subheading {
+                .ja {
+                  font-size: 1.5rem;
+                }
+                .en {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+}
