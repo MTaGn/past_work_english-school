@@ -17,6 +17,7 @@ html .body .header-container .header-container__humberger {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 900;
 }
 html .body .header-container .header-container__humberger .header-container__line1,
 html .body .header-container .header-container__humberger .header-container__line2,
@@ -83,7 +84,7 @@ html .body .header-container .header-container__nav-container .nav-flex-containe
 html .body .header-container .header-container__nav-container .subheading {
   position: absolute;
   top: 25%;
-  left: 45%;
+  left: 40%;
   text-align: center;
 }
 html .body .header-container .header-container__nav-container .subheading .subheading__li {
@@ -95,6 +96,8 @@ html .body .header-container .header-container__nav-container .subheading .subhe
   border: solid 1px #ffffff;
   padding: 20px 40px;
   position: relative;
+  width: 50%;
+  margin: auto;
 }
 html .body .header-container .header-container__nav-container .subheading .subheading__li.button:hover {
   color: #ff0000;
