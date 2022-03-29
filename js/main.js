@@ -9,11 +9,13 @@ const closeBtnElem = document.querySelector(".close")
 humbergerElem.addEventListener("click", () => {
   navContainerElem.classList.add("show")
   maskElem.classList.add("show")
+  humbergerElem.classList.remove("show")
 })
 
 navContainerElem.addEventListener("click", () => {
   navContainerElem.classList.remove("show")
   maskElem.classList.remove ("show")
+  humbergerElem.classList.add("show")
 })
 
 /* ----------
@@ -76,13 +78,8 @@ function addBallonClass(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       console.log("test2")
-      // let targetClassName = entry.target.className
       // クラス付与
-      // if (targetClassName.indexOf("first-reason") !== -1) {
         entry.target.classList.add("ballon")
-      // } else if (targetClassName.indexOf("second-reason") !== -1) {
-        // entry.target.classList.add("slide-right")
-      // }
     }
   })
 }

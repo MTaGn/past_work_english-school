@@ -18,6 +18,7 @@ html .body .header-container .header-container__humberger {
   top: 0;
   right: 0;
   z-index: 900;
+  display: none;
 }
 html .body .header-container .header-container__humberger .header-container__line1,
 html .body .header-container .header-container__humberger .header-container__line2,
@@ -26,6 +27,9 @@ html .body .header-container .header-container__humberger .header-container__lin
   border-bottom: solid 2px #ffffff;
   height: 2px;
   width: 60px;
+}
+html .body .header-container .show {
+  display: block;
 }
 html .body .header-container .header-container__nav-container {
   display: none;
@@ -96,8 +100,6 @@ html .body .header-container .header-container__nav-container .subheading .subhe
   border: solid 1px #ffffff;
   padding: 20px 40px;
   position: relative;
-  width: 50%;
-  margin: auto;
 }
 html .body .header-container .header-container__nav-container .subheading .subheading__li.button:hover {
   color: #ff0000;
@@ -156,6 +158,10 @@ html .body .header-container .header-container__nav-container .nav-flex-containe
     left: 0;
     width: 100%;
     padding: 0 5px;
+  }
+  html .body .header-container .header-container__nav-container .subheading .subheading__li.button {
+    width: 50%;
+    margin: auto;
   }
 }
 .first-view-container {

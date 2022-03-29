@@ -19,6 +19,7 @@ html {
         top: 0;
         right: 0;
         z-index: 900;
+        display: none;
 
         .header-container__line1,
         .header-container__line2,
@@ -28,7 +29,10 @@ html {
           height: 2px;
           width: 60px;
         }
-      }      
+      } 
+      .show {
+        display: block; //
+      }     
 
       .header-container__nav-container {
         display: none;
@@ -106,8 +110,6 @@ html {
             border: solid 1px #ffffff;
             padding: 20px 40px;
             position: relative;
-            width: 50%;
-            margin: auto;
           }
           .subheading__li.button:hover {
             color: #ff0000;
@@ -185,6 +187,11 @@ html {
             left: 0;
             width: 100%;
             padding: 0 5px;
+
+            .subheading__li.button {
+              width: 50%;
+              margin: auto;
+            }
           }
         }
       }
