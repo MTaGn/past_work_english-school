@@ -1,5 +1,4 @@
 .first-view-container {
-  // 高さの調整必要
   position: relative;
   margin-bottom: 120px;
 
@@ -10,7 +9,6 @@
     flex-direction: row-reverse;
 
     .img-li {
-      // 親要素を100%にしないとtex-alignで寄せできない,marginつかうとできる
       max-width: 70%;
       margin: 0 0 0 auto;
       opacity: 0;
