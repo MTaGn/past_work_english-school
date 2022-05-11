@@ -77,7 +77,6 @@ function addBallonClass(entries) {
   console.log("test1")
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log("test2")
       // クラス付与
         entry.target.classList.add("ballon")
     }
